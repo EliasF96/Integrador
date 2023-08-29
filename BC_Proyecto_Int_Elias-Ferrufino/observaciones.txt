@@ -1,0 +1,37 @@
+
+1. ** ¿Cómo deberías subir los archivos a Google Drive? **
+
+En este caso particular deben subir la carpeta con su nombre  completo y dentro colocar un archivo ZIP que contenga un .txt con el LINK AL REPOSITORIO.
+—
+
+2. ** ¿Cómo nombramos la carpeta que se va a subir a Google Drive? **
+
+- Siglas Bootcamp = "BC_Proyecto_Int_"
+- Desafío + Número = "Proyecto_Int_"
+- Nombre y apellido = "[ Nombre ]-[ Apellido ]"
+
+"BC_Proyecto_Int__Melina-Tevez"
+
+IMPORTANTE: Prestar atención a las minúsculas, mayúsculas y al tipo de guiones utilizados en el ejemplo. El nombre del archivo comprimido debe tener el mismo nombre que la carpeta.
+---
+3. ** ¿Cuánto tiempo tengo para entregar el proyecto? **
+
+  - La consigna fue detallada en la clase del día Viernes 11 de Agosto. A partir de esa fecha, tenes 14 días para hacer la entrega.
+  - El plazo máximo de entrega es el día : Viernes 25 de Agosto a las 20 hs.
+---
+4. ** Criterios de evaluación **
+
+ Para esta primera etapa del proyecto integrador es importante que lean con atención la consigna presentada en en el archivo instrucciones.txt y hayan seguido el paso a paso del proyecto que pueden mirar a partir de la clase del 11/08. Esto último es super importante para que ustedes puedan tener las bases del proyecto y luego puedan realizar las modificaciones pertinentes. 
+
+Puntos a tener en cuenta:
+
+Si bien la consigna lo menciona, no es necesario que utilicen la metodología BEM o que estructuren los archivos sass con el patrón 7-1. 
+Sí es necesario que mantengan una organización con respecto a las clases, es decir, que coloquen todas las clases en inglés o todas en español. 
+Recuerden que los estilos son libres, y que pueden hacer su ecommerce de la temática/producto que deseen. Sí tengan en cuenta que su sitio debe ser
+ acorde al producto que están “vendiendo”.
+
+Aclaración: El Proyecto Integrador es una instancia individual, por lo que
+ cada alumno debe entregar su propio trabajo. Sin embargo, si los incentivamos a 
+ que se ayuden entre ustedes, que se comuniquen, charlen y den opiniones entre 
+ ustedes. 
+

@@ -1,0 +1,314 @@
+html {
+  background-image: url(../../src/img/patron\ panaderia.jpg);
+}
+html body {
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 100px 100px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+html body .logoPrincipal {
+  margin: 0;
+}
+html body .logoPrincipal img {
+  width: 100%;
+}
+
+@media (max-width: 426px) {
+  html body {
+    margin: 10px auto;
+    background-color: rgba(114, 45, 8, 0.8);
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+header .navBarDesktop {
+  z-index: 1;
+  position: fixed;
+  margin-top: -100px;
+  margin-left: -100px;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-column-gap: 100px;
+  justify-content: center;
+  flex-wrap: nowrap;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+header .navBarDesktop .mark {
+  font-style: italic;
+  width: 150px;
+  text-align: center;
+  color: white;
+}
+header .navBarDesktop .list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+header .navBarDesktop .list li {
+  margin: 10px;
+}
+header .navBarDesktop .list a {
+  text-decoration: none;
+  color: rgb(255, 242, 0);
+}
+header .navBarDesktop .searchContainer {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  align-self: center;
+}
+header .navBarDesktop .searchContainer .searchInput {
+  font-style: italic;
+  width: 0px;
+  outline: none;
+  transition: all 0.5s;
+  border: none;
+}
+header .navBarDesktop .searchContainer .searchInput.active {
+  width: 100px;
+  opacity: 100;
+}
+header .navBarDesktop .searchContainer i {
+  cursor: pointer;
+  position: relative;
+  left: -1px;
+  font-size: 25px;
+}
+header .navBarDesktop .cartButtonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+header .navBarDesktop .cartButtonContainer i {
+  font-size: 25px;
+  color: yellow;
+  cursor: pointer;
+}
+header .navBarDesktop .cartButtonContainer i:hover {
+  color: green;
+}
+header .navBarDesktop .cartButtonContainer p {
+  position: relative;
+  font-size: 30px;
+  left: 5px;
+  color: yellow;
+}
+
+.responsiveNavBar {
+  display: none;
+}
+
+.cartContainer {
+  position: fixed;
+  transform: translateY(-1000px);
+  width: 500px;
+  max-height: 500px;
+  justify-self: center;
+  align-self: center;
+  background-color: grey;
+  z-index: 10;
+  overflow-y: auto;
+  transition: all 1s;
+}
+.cartContainer article {
+  border-bottom: black 1px solid;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: 100%;
+}
+.cartContainer article p {
+  align-self: center;
+  color: #fff;
+  font-size: 25px;
+}
+.cartContainer img {
+  min-width: 75px;
+  max-height: 75px;
+}
+.cartContainer .listTitleContainer {
+  display: flex;
+}
+.cartContainer .listTitleContainer i {
+  font-size: 40px;
+  color: yellow;
+  background-color: #222;
+  align-self: center;
+  justify-self: center;
+  cursor: pointer;
+}
+.cartContainer .listTitleContainer i:hover {
+  color: red;
+}
+.cartContainer .listTitleContainer h1 {
+  width: 95%;
+  text-align: center;
+  background-color: #222;
+  color: #888;
+  margin: 0;
+}
+
+.cartContainer.active {
+  transform: translateY(0px);
+}
+
+@media (max-width: 426px) {
+  header .navBarDesktop {
+    display: none;
+  }
+  header .responsiveNavBar {
+    display: block;
+    position: absolute;
+    top: -210px;
+    background-color: rgba(0, 0, 0, 0.85);
+    filter: drop-shadow(5px 10px 10px black);
+    z-index: 1;
+    transition: all 0.5s;
+  }
+  header .responsiveNavBar #responsiveMenuIcon {
+    color: red;
+    font-size: 25px;
+    width: auto;
+    position: relative;
+    bottom: -25px;
+    width: 100vw;
+    text-align: center;
+    background-color: #555;
+  }
+  header .responsiveNavBar .responsiveList {
+    padding: 0;
+    width: 200px;
+    margin: auto auto;
+  }
+  header .responsiveNavBar .responsiveList li {
+    padding: 0;
+    margin: 10px auto;
+    width: 100%;
+    text-align: center;
+    list-style: none;
+  }
+  header .responsiveNavBar .responsiveList a {
+    text-decoration: none;
+    color: black;
+  }
+  header .responsiveNavBar .responsiveList li:nth-child(even) {
+    background-color: #555;
+  }
+  header .responsiveNavBar .responsiveList li:nth-child(odd) {
+    background-color: #666;
+  }
+  header .responsiveNavBar .mark {
+    color: white;
+    font-family: "Lucida Sans";
+    text-align: center;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+  }
+  header .responsiveNavBar.active {
+    top: 0px;
+  }
+}
+footer {
+  width: 100vw;
+  height: 150px;
+  display: grid;
+  position: relative;
+  margin-left: -100px;
+  bottom: -300px;
+  grid-template-columns: repeat(3, auto);
+  grid-column-gap: 5%;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+footer .logo {
+  scale: 0.8;
+}
+footer ul {
+  justify-self: center;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+footer ul a {
+  color: orange;
+  margin: 0 10px;
+}
+footer .iconsContainer i {
+  margin: 5px;
+  font-size: 30px;
+  color: grey;
+}
+footer h3 {
+  color: #888;
+}
+
+@media (max-width: 426px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    margin: 10px auto;
+    margin: auto auto;
+  }
+  footer img {
+    width: 100px;
+  }
+  footer ul {
+    justify-self: center;
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  footer ul a {
+    color: orange;
+    margin: 0 10px;
+  }
+  footer .iconsContainer i {
+    margin: 5px;
+    font-size: 30px;
+    color: grey;
+  }
+  footer h3 {
+    margin: 20px 20px;
+    text-align: center;
+    color: #888;
+  }
+}
+section img {
+  width: 100%;
+}
+section h1 {
+  color: #800;
+  background-color: #555;
+}
+section h1, section p {
+  border: 5px inset #999;
+  background-color: #333;
+  margin: 30px 10px;
+  text-align: center;
+  filter: drop-shadow(2px 2px 3px black);
+}
+section p {
+  color: yellow;
+}
+section iframe {
+  margin-top: 150px;
+  width: 100%;
+}
+section p:first-letter {
+  color: brown;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 25px;
+}/*# sourceMappingURL=nosotros.css.map */

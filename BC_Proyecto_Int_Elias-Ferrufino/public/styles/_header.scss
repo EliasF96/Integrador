@@ -1,0 +1,214 @@
+header{
+    .navBarDesktop{
+    z-index: 1;
+    position:fixed;
+    margin-top:-100px;
+    margin-left: -100px;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat( 4, auto);
+    grid-column-gap: 100px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    background-color: rgb(0, 0, 0, .85);
+    //LOGO TEXTO
+    .mark{
+        font-style: italic;
+        width:150px;
+        text-align: center;
+        color:white
+    }
+    //BARRA DE NAVEGACION
+   
+    .list{    
+        list-style: none;
+        display:flex;
+        align-items: center;
+        
+        li{
+            margin:10px;
+        }
+        a{  
+            text-decoration: none;
+            color:rgb(255, 242, 0);    
+        }
+    }
+
+    //BUSCADOR OCULTO
+    .searchContainer{
+        
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        align-self:center;
+        .searchInput{
+            font-style: italic;
+            width: 0px;
+            outline: none;
+            transition: all .5s;
+            border:none; 
+            
+        }
+        .searchInput.active{
+            width:100px;
+            opacity: 100;
+        }
+        i{
+            cursor:pointer;
+            position:relative;
+            left:-1px;
+            font-size: 25px;
+    
+        }
+    }
+
+    //CARRITO
+    .cartButtonContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+        i{
+            font-size:25px;
+            color:yellow;
+            cursor: pointer;
+        }
+        i:hover{
+            color:green;
+        }
+        p{
+            position: relative;
+            font-size: 30px;
+            left:5px;
+            color:yellow
+        }
+    }
+}
+}
+
+.responsiveNavBar{
+    display: none;
+}
+
+//CART WINDOW
+.cartContainer{
+    position:fixed;
+    transform: translateY(-1000px);
+    width: 500px;
+    max-height: 500px;
+    justify-self: center;
+    align-self: center;
+    background-color: grey;
+    z-index: 10;
+    overflow-y: auto;
+    transition: all 1s;
+
+    article{
+        border-bottom: black 1px solid;
+        display:grid;
+        grid-template-columns: repeat(3, auto);
+        width: 100%;
+        
+    p{
+        align-self: center;
+        color:#fff;
+        font-size: 25px;  
+    }
+    }
+    img{
+        min-width:75px;
+        max-height: 75px;
+    }
+
+    .listTitleContainer{
+        display:flex;
+        i{
+            font-size: 40px;
+            color:yellow;
+            background-color: #222;
+            align-self: center;
+            justify-self: center;
+            cursor: pointer; 
+        }
+        i:hover{
+            color:red;
+        }
+        
+        h1{
+            width:95%;
+            text-align: center;
+            background-color: #222;
+            color:#888;
+            margin:0;
+        }
+    }
+}
+.cartContainer.active{
+    transform: translateY(0px);
+}
+
+
+@media(max-width:426px){
+    header{        
+        //HIDDEN DESK NAV
+        .navBarDesktop{
+            display:none;
+        }
+
+        //ACTIVA RESPONSIVE MENU
+        .responsiveNavBar{
+            display: block;
+            position: absolute;
+            top:-210px;
+            background-color: rgba($color: black, $alpha: .85);
+            filter: drop-shadow(5px 10px 10px black);
+            z-index: 1;
+            transition: all .5s;
+            #responsiveMenuIcon{
+                color:red;
+                font-size: 25px;
+                width: auto;
+                position: relative;
+                bottom:-25px;
+                width:100vw;
+                text-align: center;
+                background-color: #555;
+            }
+            .responsiveList{
+                padding: 0;
+                width: 200px;
+                margin: auto auto;
+                li{
+                    padding:0;
+                    margin: 10px auto;
+                    width: 100%;
+                    text-align: center;
+                    list-style: none;
+                }
+                a{
+                    text-decoration: none;
+                    color:black;
+                }
+                li:nth-child(even){
+                    background-color: #555;
+                }
+                li:nth-child(odd){
+                    background-color: #666;
+                }
+                
+            }
+            .mark{
+                color:white;
+                font-family: 'Lucida Sans';
+                text-align: center;
+                font-style: italic;
+                margin:0;
+                padding:0;
+            }
+        }
+        .responsiveNavBar.active{
+            top:0px;
+        }
+    }
+}

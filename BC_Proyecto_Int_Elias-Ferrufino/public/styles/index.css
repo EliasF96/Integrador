@@ -1,0 +1,383 @@
+html {
+  background-image: url(../../src/img/patron\ panaderia.jpg);
+}
+html body {
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 100px 100px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+html body .logoPrincipal {
+  margin: 0;
+}
+html body .logoPrincipal img {
+  width: 100%;
+}
+
+@media (max-width: 426px) {
+  html body {
+    margin: 10px auto;
+    background-color: rgba(114, 45, 8, 0.8);
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+header .navBarDesktop {
+  z-index: 1;
+  position: fixed;
+  margin-top: -100px;
+  margin-left: -100px;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-column-gap: 100px;
+  justify-content: center;
+  flex-wrap: nowrap;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+header .navBarDesktop .mark {
+  font-style: italic;
+  width: 150px;
+  text-align: center;
+  color: white;
+}
+header .navBarDesktop .list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+header .navBarDesktop .list li {
+  margin: 10px;
+}
+header .navBarDesktop .list a {
+  text-decoration: none;
+  color: rgb(255, 242, 0);
+}
+header .navBarDesktop .searchContainer {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  align-self: center;
+}
+header .navBarDesktop .searchContainer .searchInput {
+  font-style: italic;
+  width: 0px;
+  outline: none;
+  transition: all 0.5s;
+  border: none;
+}
+header .navBarDesktop .searchContainer .searchInput.active {
+  width: 100px;
+  opacity: 100;
+}
+header .navBarDesktop .searchContainer i {
+  cursor: pointer;
+  position: relative;
+  left: -1px;
+  font-size: 25px;
+}
+header .navBarDesktop .cartButtonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+header .navBarDesktop .cartButtonContainer i {
+  font-size: 25px;
+  color: yellow;
+  cursor: pointer;
+}
+header .navBarDesktop .cartButtonContainer i:hover {
+  color: green;
+}
+header .navBarDesktop .cartButtonContainer p {
+  position: relative;
+  font-size: 30px;
+  left: 5px;
+  color: yellow;
+}
+
+.responsiveNavBar {
+  display: none;
+}
+
+.cartContainer {
+  position: fixed;
+  transform: translateY(-1000px);
+  width: 500px;
+  max-height: 500px;
+  justify-self: center;
+  align-self: center;
+  background-color: grey;
+  z-index: 10;
+  overflow-y: auto;
+  transition: all 1s;
+}
+.cartContainer article {
+  border-bottom: black 1px solid;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: 100%;
+}
+.cartContainer article p {
+  align-self: center;
+  color: #fff;
+  font-size: 25px;
+}
+.cartContainer img {
+  min-width: 75px;
+  max-height: 75px;
+}
+.cartContainer .listTitleContainer {
+  display: flex;
+}
+.cartContainer .listTitleContainer i {
+  font-size: 40px;
+  color: yellow;
+  background-color: #222;
+  align-self: center;
+  justify-self: center;
+  cursor: pointer;
+}
+.cartContainer .listTitleContainer i:hover {
+  color: red;
+}
+.cartContainer .listTitleContainer h1 {
+  width: 95%;
+  text-align: center;
+  background-color: #222;
+  color: #888;
+  margin: 0;
+}
+
+.cartContainer.active {
+  transform: translateY(0px);
+}
+
+@media (max-width: 426px) {
+  header .navBarDesktop {
+    display: none;
+  }
+  header .responsiveNavBar {
+    display: block;
+    position: absolute;
+    top: -210px;
+    background-color: rgba(0, 0, 0, 0.85);
+    filter: drop-shadow(5px 10px 10px black);
+    z-index: 1;
+    transition: all 0.5s;
+  }
+  header .responsiveNavBar #responsiveMenuIcon {
+    color: red;
+    font-size: 25px;
+    width: auto;
+    position: relative;
+    bottom: -25px;
+    width: 100vw;
+    text-align: center;
+    background-color: #555;
+  }
+  header .responsiveNavBar .responsiveList {
+    padding: 0;
+    width: 200px;
+    margin: auto auto;
+  }
+  header .responsiveNavBar .responsiveList li {
+    padding: 0;
+    margin: 10px auto;
+    width: 100%;
+    text-align: center;
+    list-style: none;
+  }
+  header .responsiveNavBar .responsiveList a {
+    text-decoration: none;
+    color: black;
+  }
+  header .responsiveNavBar .responsiveList li:nth-child(even) {
+    background-color: #555;
+  }
+  header .responsiveNavBar .responsiveList li:nth-child(odd) {
+    background-color: #666;
+  }
+  header .responsiveNavBar .mark {
+    color: white;
+    font-family: "Lucida Sans";
+    text-align: center;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+  }
+  header .responsiveNavBar.active {
+    top: 0px;
+  }
+}
+footer {
+  width: 100vw;
+  height: 150px;
+  display: grid;
+  position: relative;
+  margin-left: -100px;
+  bottom: -300px;
+  grid-template-columns: repeat(3, auto);
+  grid-column-gap: 5%;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+footer .logo {
+  scale: 0.8;
+}
+footer ul {
+  justify-self: center;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+footer ul a {
+  color: orange;
+  margin: 0 10px;
+}
+footer .iconsContainer i {
+  margin: 5px;
+  font-size: 30px;
+  color: grey;
+}
+footer h3 {
+  color: #888;
+}
+
+@media (max-width: 426px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    margin: 10px auto;
+    margin: auto auto;
+  }
+  footer img {
+    width: 100px;
+  }
+  footer ul {
+    justify-self: center;
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  footer ul a {
+    color: orange;
+    margin: 0 10px;
+  }
+  footer .iconsContainer i {
+    margin: 5px;
+    font-size: 30px;
+    color: grey;
+  }
+  footer h3 {
+    margin: 20px 20px;
+    text-align: center;
+    color: #888;
+  }
+}
+.productsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  top: 125px;
+}
+.productsContainer h2 {
+  width: 100%;
+  text-align: center;
+  background-color: #555;
+  color: #999;
+}
+.productsContainer article {
+  position: relative;
+  border: 5px #555 solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  transition: all 0.5s;
+  top: 0;
+  left: 0;
+  filter: drop-shadow(5px 5px 5px #000);
+}
+.productsContainer article h3 {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  background-color: #111;
+  color: yellow;
+  font-size: 25px;
+}
+.productsContainer article p {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  font-size: 20px;
+  font-family: Impact;
+}
+.productsContainer article p:last-of-type {
+  color: green;
+}
+.productsContainer article .itemDesc {
+  font-size: 15px;
+  font-style: normal;
+  font-family: "Franklin Gothic Medium";
+}
+.productsContainer article button {
+  margin: 5px;
+}
+.productsContainer article:hover {
+  border-color: yellow;
+  top: 3px;
+  left: 3px;
+}
+.productsContainer .product-info {
+  background-color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+}
+.productsContainer .product-info h3 {
+  text-align: center;
+}
+.productsContainer img {
+  width: 150px;
+  min-height: 150px;
+}
+
+@keyframes grises {
+  0% {
+    background-color: #fff;
+  }
+  100% {
+    background-color: #555;
+  }
+}
+@keyframes colores {
+  0% {
+    background-color: #f00;
+  }
+  50% {
+    background-color: #0f0;
+  }
+  100% {
+    background-color: #00f;
+  }
+}/*# sourceMappingURL=index.css.map */

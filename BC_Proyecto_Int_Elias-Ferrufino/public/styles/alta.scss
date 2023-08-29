@@ -1,0 +1,43 @@
+@use '_html.scss'; 
+@use '_header.scss';
+@use '_footer.scss'; 
+
+
+form{
+    min-width: 200px;
+    display:grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    column-gap: 50px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto auto;
+    height: 100vh;
+}
+label{
+    text-align: center;
+    font-size: 25px;
+    color: grey;
+}
+
+//RESPONSIVE
+@media(max-width:426px){
+    form{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 10px auto;
+    }
+    label{
+        margin:10px auto;
+        font-size: 12px;
+        background-color: #222;
+        width: 100%;
+        text-align: center;
+        color: red;
+    }
+    textarea{
+        width: 150px;
+    }
+}

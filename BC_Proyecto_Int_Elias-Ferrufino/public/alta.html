@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Educacion_IT - Elias Ferrufino" />
+    <meta name="description" content="Proyecto_integrador_Parte_1"/>
+    <title>Alta</title>
+    <link rel="stylesheet" href="./styles/alta.css">
+    <script src="https://kit.fontawesome.com/79c81429e1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="navBarDesktop">
+            <h2 class="mark">Lorem Ipsum Bakery</h2>
+            <ul class="list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="nosotros.html">Sobre nosotros</a></li>
+                <li><a href="alta.html">Alta</a></li>
+            </ul>
+            <div class="searchContainer">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type=text class="searchInput" placeholder="Buscar...">
+            </div>
+            <div class="cartButtonContainer">
+                <i class="fa-solid fa-cart-arrow-down"></i>        
+                <p class="cartCounter"></p>
+            </div>
+        </nav>
+    
+        <!--RESPONSIVE MENU-->
+        <nav class="responsiveNavBar">
+            <ul class="responsiveList">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="nosotros.html">Sobre nosotros</a></li>
+                <li><a href="alta.html">Alta</a></li>
+                <li><input type=text class="inputSearchRespsonsive" placeholder="Buscar..."></li>
+            </ul>
+            <h2 class="mark">Lorem Ipsum Bakery</h2>
+            <i class="fas fa-bars" id="responsiveMenuIcon"></i>
+        </nav>
+        </header>
+
+    <form action="index.html">
+        <label for="inputName" class="nameLabel">Product Name</label>
+        <input type="text" id="inputName" required>
+
+        <label for="inputPrice" class="priceLabel">Price</label>
+        <input type="number" id="inputPrice" placeholder="" required>
+
+        <label for="inputStock" class="stockLabel">Stock</label>
+        <input type="number" id="inputStock" placeholder="" required>
+
+        <label for="inputMark" class="markLabel">Mark</label>
+        <input type="text" id="inputMark" placeholder="" required>
+
+        <label for="inputCategory" class="categoryLabel">Category</label>
+        <select name="Hola" id="inputCategory">
+            <option value="auto" hidden>Select an category</option>
+            <option value="normal">Normal</option>
+            <option value="celiac">celiac</option>
+        </select>
+
+        <label for="inputShortDescription" class="shortDescriptionLabel">Short Description</label>
+        <textarea name="textareaShortDescription" id="inputShortDescription" cols="1" rows="1" placeholder="" required></textarea>
+
+        <label for="inputLargeDescription" class="largeDescription">Large Description</label>
+        <textarea name="textareaLargeDescription"  id="inputLargeDescription" cols="1" rows="2" placeholder="" required></textarea>
+
+        <label for="freeShippingInput" class="freeShippingLabel">Free shipping</label>
+        <input type="number" id="freeShippingInput" required>
+
+        <label for="inputDateStart" class="dateStartLabel">Date Start</label>
+        <input type="date" id="inputDateStart"  required>
+
+        <label for="inputDateEnd" class="dateEndLabel">Date Through</label>
+        <input type="date" id="inputDateEnd" required>
+
+        <label for="inputImg" class="idLabel">Img URL</label>
+        <input type="text" id="inputImg" placeholder="" required>
+        <br>
+        <input type="submit" value="Upload">
+    </form>
+
+      
+    <footer>
+            <img src="../src/img/logo.jpg" alt="Logo">
+        <h3>© 2023 Lorem Ipsum Bakery -  Todos los derechos reservados.</h3>
+        <div class="iconsContainer">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-telegram"></i>
+            <i class="fa-solid fa-earth-americas"></i>
+        </div>
+    </footer>
+    <script src="scriptAlta.js"></script>
+</body>
+</html>

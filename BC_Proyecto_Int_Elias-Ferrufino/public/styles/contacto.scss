@@ -1,0 +1,125 @@
+ 
+@use '_header.scss';
+@use '_footer.scss'; 
+@use '_html.scss';
+
+.formContainer{
+    display: flex;
+    height: 80vh;   
+    form{
+        border-radius: 25px;
+        background-color:rgba($color: cyan, $alpha: .5);
+        display: flex;
+        flex-direction: column;
+        margin:20px;
+        width: 50%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        h1{
+            background-color: #222;
+            color:yellow;
+            border-radius: 10px;
+            grid-column: span 2;
+            text-align: center;
+
+        }
+        label{
+            border-radius: 10px;
+            font-size: 30px;
+            color:#777;
+            background-color: #111;
+        }
+        input, textarea{
+            width:200px;
+            margin: auto 10px;
+        }
+        .submit{
+            grid-column: span 2;
+            width: 100%;
+            margin: 20px 30px;
+            height: 50px;
+            font-size: 30px;
+            letter-spacing: 10px;
+        }
+        
+    input.valid, textarea.valid{
+        border: 2px solid #0f0;
+    }
+    input.invalid, textarea.invalid{
+        border: 2px solid #f00;
+    }
+    }
+    
+    .location{
+        margin:20px;
+        width: 50%;
+        iframe{
+            width: 100%;
+            height: 100%;
+            border-radius: 25px;
+        }
+    }
+}   
+//RESPONSIVE
+@media(max-width:426px){
+    .formContainer{
+        width: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        height: fit-content;   
+        
+        form{
+            border-radius: 25px;
+            background-color:rgba($color: cyan, $alpha: .5);
+            display: flex;
+            flex-direction: column;
+            margin:20px;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            h1{
+                background-color: #222;
+                color:yellow;
+                border-radius: 10px;
+                grid-column: span 2;
+                text-align: center;
+                scale: 1;
+            }
+            label{
+                margin:5px auto;
+                border-radius: 5px;
+                font-size: 20px;
+                color:#777;
+                background-color: #111;
+            }
+            input, textarea{
+                width:175px;
+                margin: auto 10px;
+            }
+            .submit{
+                width: 100px;
+                margin: 20px 30px;
+                height: 15px;
+                font-size: 12px;
+                letter-spacing: 1px;
+            }
+        }
+        
+
+        
+        .location{
+            margin:20px;
+            width: 100%;
+            iframe{
+                width: 100%;
+                height: 500px;
+                border-radius: 25px;
+            }
+        }
+        
+    }   
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Educacion_IT - Elias Ferrufino" />
+    <meta name="description" content="Proyecto_integrador_Parte_1"/>
+    <title>Contacto</title>
+    <link rel="stylesheet" href="./styles/contacto.css">
+    <script src="https://kit.fontawesome.com/79c81429e1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+    <nav class="navBarDesktop">
+            <h2 class="mark">Lorem Ipsum Bakery</h2>
+        <ul class="list">
+            <!--Menu-->
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="nosotros.html">Sobre nosotros</a></li>
+            <li><a href="alta.html">Alta</a></li>
+            <!--Buscador-->
+        </ul>
+        <div class="searchContainer">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type=text class="searchInput" placeholder="Buscar...">
+        </div>
+        <div class="cartButtonContainer">
+            <i class="fa-solid fa-cart-arrow-down"></i>        
+            <p class="cartCounter"></p>
+        </div>
+    </nav>
+
+    <!--RESPONSIVE MENU-->
+    <nav class="responsiveNavBar">
+        <ul class="responsiveList">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="nosotros.html">Sobre nosotros</a></li>
+            <li><a href="alta.html">Alta</a></li>
+            <li><input type=text class="inputSearchRespsonsive" placeholder="Buscar..."></li>
+        </ul>
+        <h2 class="mark">Lorem Ipsum Bakery</h2>
+        <i class="fas fa-bars" id="responsiveMenuIcon"></i>
+    </nav>
+    </header>
+
+    <section class="formContainer">
+        
+        <form action="contacto.html">
+            <h1>Complete the form to send</h1>
+
+            <label for="inputName" class="nameLabel">First Name</label>
+            <input type="text" id="inputName" class="input" required placeholder="Name">
+
+            <label for="inputEmail" class="emailLabel">Email</label>
+            <input type="email" id="inputEmail" placeholder="Example: 'example@org.com'" required>
+
+            <label for="inputSubject" class="subjetLabel">Subject</label>
+            <input type="text" id="inputSubject" placeholder="Max 10 characters" required>
+
+            <label for="inputMessage" class="messageLabel">Message</label>
+            <textarea name="message" id="inputMessage" class="input" cols="30" rows="2" placeholder="Max 200 characters"></textarea>            
+
+            <input class="submit" type="submit" value="Enviar">
+        </form>
+           
+        <div class="location">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3080.030069335126!2d-0.3764907000000009!3d39.468649400000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604f3b5b564f29%3A0x9e47e9c3b796c20!2sLorem%20Agency!5e0!3m2!1ses-419!2sar!4v1693194429762!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        </div>
+    </section>
+
+      
+    <footer>
+        <!--logo-->
+            <img src="../src/img/logo.jpg" alt="Logo">
+        <!--Contactos-->
+        <h3>© 2023 Lorem Ipsum Bakery -  Todos los derechos reservados.</h3>
+        <div class="iconsContainer">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-telegram"></i>
+            <i class="fa-solid fa-earth-americas"></i>
+        </div>
+    </footer>
+    <script src="scriptContacto.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+@use "_html";
+@use "_header";
+@use "_footer";
+    section{
+        img{
+            width:100%;
+        }
+        h1{
+            color:#800;
+            background-color: #555;
+        }
+        h1,p{
+            border:5px inset #999;
+            background-color: #333;
+            margin:30px 10px;
+            text-align: center;
+            filter: drop-shadow(2px 2px 3px black);
+        }
+        p{
+            color:yellow
+        }
+        iframe{
+            margin-top: 150px;
+            width: 100%;
+        }
+        p:first-letter{
+            color:brown;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 25px;
+        }
+    }
